@@ -1,0 +1,6 @@
+[kubernetes-master-nodes]
+k8s-dev-master ansible_host=
+
+[kubernetes-worker-nodes]
+k8s-dev-worker02 ansible_host=
+k8s-dev-worker01 ansible_host=

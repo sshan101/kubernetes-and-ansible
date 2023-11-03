@@ -1,0 +1,14 @@
+---
+- hosts: kubernetes-master-nodes
+  vars_files:
+  - env_variables 
+  tasks:
+
+  - name: Get the token for joining the worker nodes
+    become: yes
+    become_user: root
+    shell: kubeadm token create  --print-join-command
+    register: kubernetes_join_command
+
+  - name: Copy join command to local file
+    action: copy content="{{ kubernetes_join_command.stdout }}" dest="/tmp/kubernetes_join_command"
