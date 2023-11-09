@@ -32,13 +32,13 @@
 [kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
 [kubelet-start] Starting the kubelet
 [wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
-[apiclient] All control plane components are healthy after 7.502940 seconds
+[apiclient] All control plane components are healthy after 6.002410 seconds
 [upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
 [kubelet] Creating a ConfigMap "kubelet-config" in namespace kube-system with the configuration for the kubelets in the cluster
 [upload-certs] Skipping phase. Please see --upload-certs
 [mark-control-plane] Marking the node ip-172-31-51-234.ec2.internal as control-plane by adding the labels: [node-role.kubernetes.io/control-plane node.kubernetes.io/exclude-from-external-load-balancers]
 [mark-control-plane] Marking the node ip-172-31-51-234.ec2.internal as control-plane by adding the taints [node-role.kubernetes.io/control-plane:NoSchedule]
-[bootstrap-token] Using token: a980xm.w8ysqy0ahmuktym0
+[bootstrap-token] Using token: is4um9.54rog8hur22psvqd
 [bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
 [bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to get nodes
 [bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
@@ -67,5 +67,5 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 
 Then you can join any number of worker nodes by running the following on each as root:
 
-kubeadm join 172.31.51.234:6443 --token a980xm.w8ysqy0ahmuktym0 \
-	--discovery-token-ca-cert-hash sha256:2d121d4b58c659b07f4a142289205a9c1e8d29771db2326976159139004746b8 
+kubeadm join 172.31.51.234:6443 --token is4um9.54rog8hur22psvqd \
+	--discovery-token-ca-cert-hash sha256:9bdf9194d45774021de285b0ceff24edc6d52d58cefe838da076f9d23acf4180 

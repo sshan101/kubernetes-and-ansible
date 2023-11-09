@@ -1,6 +1,6 @@
 #Edit these values only as per your environment
 #Enter your master node advertise ip address and cidr range for the pods.
-ad_addr: 
+ad_addr: 35.153.67.20
 cidr_v: 10.244.0.0/16
 
 ###################################################################################
@@ -9,6 +9,7 @@ packages:
 - docker
 - kubeadm
 - kubectl
+- nginx
 
 services:
 - podman
